@@ -17,8 +17,7 @@ Template.body.onCreated(function bodyOnCreated() {
           // If hide completed is checked, filter tasks
           return Tasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
       }
-    // Otherwise, return all of the tasks
-    // Show newest tasks at the top
+    // Otherwise, return all of the tasks // Show newest tasks at the top
     return Tasks.find({}, { sort: { createdAt: -1 } });
   },
   incompleteCount() {
